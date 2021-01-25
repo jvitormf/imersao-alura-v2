@@ -48,7 +48,7 @@ export default function Home() {
 
         <Footer />
       </QuizContainer>
-      <GitHubCorner />
+      <GitHubCorner projectUrl="https://github.com/jvitormf/imersao-alura-v2" />
     </QuizBackground>
   )
 }
