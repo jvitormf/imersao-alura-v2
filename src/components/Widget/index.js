@@ -46,6 +46,44 @@ Widget.Content = styled.div`
     list-style: none;
     padding: 0;
   }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    input {
+      width: 283px;
+      height: 38px;
+
+      margin-top: 15px;
+
+      border-radius: 3.5px;
+
+      font-style: normal;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0.15px;
+    }
+
+    button {
+      width: 283px;
+      height: 36px;
+
+      margin-top: 25px;
+
+      border-radius: 4px;
+
+      font-style: normal;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 16px;
+      letter-spacing: 1.25px;
+      text-align: center;
+      color: ${({ theme }) => theme.colors.contrastText};
+      background-color: ${({ theme }) => theme.colors.primary};
+    }
+  }
 `;
 
 export default Widget;
