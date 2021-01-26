@@ -1,78 +1,146 @@
-# Example app with styled-components
+<!-- BADGES -->
+<p align="center">
+  <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/jvitormf/imersao-alura-v2?color=green">
+  <img alt="GitHub forks" src="https://img.shields.io/github/forks/jvitormf/imersao-alura-v2">
+  <img alt="GitHub stars" src="https://img.shields.io/github/stars/jvitormf/imersao-alura-v2">
+  <img alt="GitHub issues" src="https://img.shields.io/github/issues/jvitormf/imersao-alura-v2">
+  <img alt="GitHub" src="https://img.shields.io/github/license/jvitormf/imersao-alura-v2">
+  <a href="https://www.linkedin.com/in/jvitormf/">
+    <img alt="LinkedIn" src="https://img.shields.io/badge/-LinkedIn-black.svg?style=flat&logo=linkedin&colorB=555">
+  </a>
+</p>
+<br/>
 
-This example features how you use a different styling solution than [styled-jsx](https://github.com/zeit/styled-jsx) that also supports universal styles. That means we can serve the required styles for the first render within the HTML and then load the rest in the client. In this case we are using [styled-components](https://github.com/styled-components/styled-components).
+<!-- PROJECT LOGO -->
+<p align="center">
+  <a href="https://github.com/jvitormf/imersao-alura-v2">
+     <img src=".github/logo.svg" alt="Logo">
+  </a>
 
-For this purpose we are extending the `<Document />` and injecting the server side rendered styles into the `<head>`, and also adding the `babel-plugin-styled-components` (which is required for server side rendering). Additionally we set up a global [theme](https://www.styled-components.com/docs/advanced#theming) for styled-components using NextJS custom [`<App>`](https://nextjs.org/docs/advanced-features/custom-app) component.
+  [Imersão React - Next.js](https://www.alura.com.br/imersao-react-next-js) it's a five-day event created by [Alura](https://www.alura.com.br/), the objective is to teach people how easy it is to develop a website using these technologies. The event has lots of practice coding, challenges, and networking. An online and completely free event that will help you take the next step. :rocket:
+</p>
 
-## Deploy your own
+***
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+<!-- TABLE OF CONTENTS -->
+# Table of Contents
+* [About the Project](#boom-about-the-project)
+  * [Built With](#gear-built-with)
+    * [Tools](#tools)
+    * [Technologies](#Technologies)
+* [Getting Started](#rocket-getting-started)
+  * [Prerequisites](#clipboard-prerequisites)
+  * [Installation](#zap-installation)
+* [License](#memo-license)
+* [Contributing](#bulb-contributing)
+* [Contact](#e-mail-contact)
+* [Acknowledgements](#exclamation-acknowledgements)
+<!-- * [Usage](#usage)
+* [Roadmap](#arrows_clockwise-roadmap) -->
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-styled-components&project-name=with-styled-components&repository-name=with-styled-components)
+<!-- ABOUT THE PROJECT -->
+# :boom: About The Project
 
-## How to use
+<!-- Project image -->
+<img src=".github/screen.png" alt="Proffy">
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
 
-```bash
-npx create-next-app --example with-styled-components with-styled-components-app
-# or
-yarn create next-app --example with-styled-components with-styled-components-app
-```
+## Description
+The website created is a quiz about Javascript.
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+# :gear: Built With
+  ## Tools
+  * [VSCode](https://code.visualstudio.com/)
 
-### Try it on CodeSandbox
+  ## Technologies
+  * [Node.js](https://nodejs.org/)
+  * [React](https://reactjs.org/)
+  * [Next.js](https://nextjs.org/)
 
-[Open this example on CodeSandbox](https://codesandbox.io/s/github/vercel/next.js/tree/canary/examples/with-styled-components)
+  [:arrow_up: Back to top](#table-of-Contents)
 
-### Notes
+# :fireworks: Layout
+* Click [here](https://www.figma.com/file/cg1MIzSRRss8ggpypQbmdD/AluraQuiz?node-id=0%3A1) to see the web layout of this app.
 
-When wrapping a [Link](https://nextjs.org/docs/api-reference/next/link) from `next/link` within a styled-component, the [as](https://styled-components.com/docs/api#as-polymorphic-prop) prop provided by `styled` will collide with the Link's `as` prop and cause styled-components to throw an `Invalid tag` error. To avoid this, you can either use the recommended [forwardedAs](https://styled-components.com/docs/api#forwardedas-prop) prop from styled-components or use a different named prop to pass to a `styled` Link.
+[:arrow_up: Back to top](#table-of-Contents)
 
-<details>
-<summary>Click to expand workaround example</summary>
-<br />
+<!-- GETTING STARTED -->
+# :rocket: Getting Started
 
-**components/StyledLink.js**
+To get a local copy up and running follow these simple steps.
 
-```javascript
-import Link from 'next/link'
-import styled from 'styled-components'
+[:arrow_up: Back to top](#table-of-Contents)
 
-const StyledLink = ({ as, children, className, href }) => (
-  <Link href={href} as={as} passHref>
-    <a className={className}>{children}</a>
-  </Link>
-)
+## :clipboard: Prerequisites
 
-export default styled(StyledLink)`
-  color: #0075e0;
-  text-decoration: none;
-  transition: all 0.2s ease-in-out;
+* Node.js - [Install guide](https://nodejs.org/en/download/package-manager/)
+* Yarn - [Install guide](https://classic.yarnpkg.com/en/docs/install/#windows-stable)
 
-  &:hover {
-    color: #40a9ff;
-  }
+[:arrow_up: Back to top](#table-of-Contents)
 
-  &:focus {
-    color: #40a9ff;
-    outline: none;
-    border: 0;
-  }
-`
-```
+## :zap: Installation
+Run the commands below to install and run the app.
+  ```sh
+    #Clone the project
+    git clone https://github.com/jvitormf/imersao-alura-v2
+  ```
 
-**pages/index.js**
+  ```sh
+    #Go to server folder
+    cd imersao-alura-v2
 
-```javascript
-import StyledLink from '../components/StyledLink'
+    #Install dependencies
+    yarn
 
-export default () => (
-  <StyledLink href="/post/[pid]" forwardedAs="/post/abc">
-    First post
-  </StyledLink>
-)
-```
+    #Start the server
+    yarn dev
+   ```
 
-</details>
+[:arrow_up: Back to top](#table-of-Contents)
+
+<!-- CONTRIBUTING -->
+# :bulb: Contributing
+
+Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature`)
+3. Commit your Changes (`git commit -m 'Add some Feature`)
+4. Push to the Branch (`git push origin Feature`)
+5. Open a Pull Request
+
+[:arrow_up: Back to top](#table-of-Contents)
+
+<!-- USAGE EXAMPLES -->
+<!-- # Usage
+
+Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+
+_For more examples, please refer to the [Documentation](https://example.com)_ -->
+
+
+<!-- LICENSE -->
+# :memo: License
+
+Distributed under the MIT License. See [LICENSE](LICENSE.md) for more information.
+
+[:arrow_up: Back to top](#table-of-Contents)
+
+
+<!-- CONTACT -->
+# :e-mail: Contact
+
+João Vitor - <j.vitor.mf@gmail.com>
+
+LinkedIn - <https://www.linkedin.com/in/jvitormf/>
+
+[:arrow_up: Back to top](#table-of-Contents)
+
+
+<!-- ACKNOWLEDGEMENTS -->
+# :exclamation: Acknowledgements
+
+* [Imersão React - Next.js](https://www.alura.com.br/imersao-react-next-js)
+* [Alura](https://www.alura.com.br/)
+
+[:arrow_up: Back to top](#table-of-Contents)
