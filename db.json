@@ -1,28 +1,66 @@
 {
   "bg": "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1950&q=80",
-  "title": "Quiz CSS da Alura",
-  "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
+  "title": "Quiz Javascript",
+  "description": "Teste os seus conhecimentos sobre javascript e vamos ver quantas perguntas você vai acertar",
   "questions": [
     {
-      "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-      "title": "Como fazer um seletor por id via CSS?",
-      "description": "Essa é pra aquecer",
-      "answer": 2,
+      "image": "https://media.giphy.com/media/4JVTF9zR9BicshFAb7/giphy.gif",
+      "title": "Como encontrar o número com maior valor de x e y?",
+      "description": "Brincando com números",
+      "answer": 0,
       "alternatives": [
-        ".elemento",
-        "*elemento",
-        "#elemento",
-        "%elemento"
+        "Math.max(x, y)",
+        "ceil(x, y)",
+        "Math.top(x, y)",
+        "top(x, y)"
       ]
     },
     {
-      "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-      "title": "Como fazer um background gradiente com css?",
-      "description": "Faz tempo em haha",
-      "answer": 0,
+      "image": "https://media.giphy.com/media/3o6YfTUIfDYjPdnk52/giphy.gif",
+      "title": "Como arredondar o número para o inteiro mais proximo?",
+      "description": "Brincando com números",
+      "answer": 3,
       "alternatives": [
-        "background: linear-gradient(#e66465, #9198e5);",
-        "background: gradient(#e66465, #9198e5);"
+        "round(5.15)",
+        "rnd(5.15)",
+        "Math.rnd(5.15)",
+        "Math.round(5.15)"
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/QmJ3e9So5M9NdNkOGo/giphy.gif",
+      "title": "Como gerar um número aleatorio entre 1 e 100 em Javascript?",
+      "description": "Brincando com números",
+      "answer": 1,
+      "alternatives": [
+        "Math.rnd() * (100 - 1) + 1",
+        "Math.random() * (100 - 1) + 1",
+        "Math.random(100, 1)",
+        "random() * (100 - 1) + 1"
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif",
+      "title": "Como gerar um novo vetor com os números multiplicados por 2? Ex.: [1, 2, 3] => [2, 4, 6]",
+      "description": "Brincando com vetores",
+      "answer": 1,
+      "alternatives": [
+        "const dobro = vetor.some((num) => num * 2)",
+        "const dobro = vetor.map((num) => num * 2)",
+        "const dobro = vetor.pop((num) => num * 2)",
+        "const dobro = vetor.shift((num) => num * 2)"
+      ]
+    },
+    {
+      "image": "https://media.giphy.com/media/xT9IgzoKnwFNmISR8I/giphy.gif",
+      "title": "Como concatenar os valores de um array em uma string sem separador?",
+      "description": "Brincando com vetores",
+      "answer": 2,
+      "alternatives": [
+        "vetor.join()",
+        "vetor.concat()",
+        "vetor.join('')",
+        "vetor.toString()"
       ]
     }
   ],
