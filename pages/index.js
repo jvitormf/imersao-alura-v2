@@ -14,7 +14,7 @@ import Button from '../src/components/Button';
 
 export default function Home() {
   const router = useRouter();
-  const [name, setName] = useState('');
+  const [userName, setUserName] = useState('');
 
   return (
     <QuizBackground backgroundImage={db.bg}>
@@ -26,21 +26,24 @@ export default function Home() {
             <h1>Quiz Javascript</h1>
           </Widget.Header>
           <Widget.Content>
-            <p>Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</p>
+            <p>
+              Responda as questões do quiz sobre
+              Javascript para por a prova seus conhecimentos.
+            </p>
             <form onSubmit={(event) => {
               event.preventDefault();
-              router.push(`/quiz?name=${name}`);
+              router.push(`/quiz?userName=${userName}`);
             }}
             >
               <Input
                 name="userName"
                 type="text"
                 placeholder="Digite seu nome"
-                onChange={(event) => setName(event.target.value)}
-                value={name}
+                onChange={(event) => setUserName(event.target.value)}
+                value={userName}
               />
-              <Button type="submit" disabled={name.length === 0}>
-                {`Jogar ${name}`}
+              <Button type="submit" disabled={userName.length === 0}>
+                {`Jogar ${userName}`}
               </Button>
             </form>
           </Widget.Content>
