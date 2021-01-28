@@ -41,7 +41,7 @@
     },
     {
       "image": "https://media.giphy.com/media/26tn33aiTi1jkl6H6/giphy.gif",
-      "title": "Como gerar um novo vetor com os números multiplicados por 2? Ex.: [1, 2, 3] => [2, 4, 6]",
+      "title": "Como gerar um novo vetor com os seus valores multiplicados por 2? Ex.: [1, 2, 3] => [2, 4, 6]",
       "description": "Brincando com vetores",
       "answer": 1,
       "alternatives": [
