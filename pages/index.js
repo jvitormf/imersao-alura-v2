@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import styled from 'styled-components';
 import { useRouter } from 'next/router';
 
 import db from '../db.json';
@@ -10,6 +9,8 @@ import Footer from '../src/components/Footer';
 import GitHubCorner from '../src/components/GitHubCorner';
 import QuizBackground from '../src/components/QuizBackground';
 import QuizLogo from '../src/components/QuizLogo';
+import Input from '../src/components/Input';
+import Button from '../src/components/Button';
 
 export default function Home() {
   const router = useRouter();
@@ -31,16 +32,16 @@ export default function Home() {
               router.push(`/quiz?name=${name}`);
             }}
             >
-              <input
+              <Input
+                name="userName"
                 type="text"
-                placeholder="Informe seu nome"
-                onChange={(event) => {
-                  setName(event.target.value);
-                }}
+                placeholder="Digite seu nome"
+                onChange={(event) => setName(event.target.value)}
+                value={name}
               />
-              <button type="submit" disabled={name.length === 0}>
-                Jogar
-              </button>
+              <Button type="submit" disabled={name.length === 0}>
+                {`Jogar ${name}`}
+              </Button>
             </form>
           </Widget.Content>
         </Widget>
