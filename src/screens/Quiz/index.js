@@ -2,8 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 
-import db from '../../../db.json';
-
 import Widget from '../../components/Widget';
 import QuizContainer from '../../components/QuizContainer';
 import QuizBackground from '../../components/QuizBackground';
@@ -161,13 +159,13 @@ const screenStates = {
   RESULT: 'RESULT',
 };
 
-export default function QuizPage({ externalQuestions, externalBg }) {
+export default function QuizPage({ questions, background }) {
   const [screenState, setScreenState] = useState(screenStates.QUIZ);
   const [results, setResults] = useState([]);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const questionIndex = currentQuestion;
-  const totalQuestions = externalQuestions.length;
-  const question = externalQuestions[questionIndex];
+  const totalQuestions = questions.length;
+  const question = questions[questionIndex];
 
   function addResult(result) {
     setResults([
@@ -193,7 +191,7 @@ export default function QuizPage({ externalQuestions, externalBg }) {
   }
 
   return (
-    <QuizBackground backgroundImage={externalBg}>
+    <QuizBackground backgroundImage={background}>
       <QuizContainer>
         <QuizLogo />
 
