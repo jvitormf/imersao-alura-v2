@@ -65,7 +65,9 @@
     }
   ],
   "external": [
-    "https://got-quiz-next-js.matheus13f.vercel.app/"
+    "https://got-quiz-next-js.matheus13f.vercel.app/",
+    "https://mr-robot-quiz-alura.vercel.app/",
+    "https://tw3-quiz.lucas98fernando.vercel.app/"
   ],
   "theme": {
     "colors": {
