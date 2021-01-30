@@ -65,7 +65,7 @@
     }
   ],
   "external": [
-    ""
+    "https://got-quiz-next-js.matheus13f.vercel.app/"
   ],
   "theme": {
     "colors": {
