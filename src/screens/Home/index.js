@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
 
 import Widget from '../../components/Widget';
 import QuizContainer from '../../components/QuizContainer';
@@ -108,7 +109,12 @@ export default function Home({ externalLinks, background }) {
           animate="show"
         />
       </QuizContainer>
-      <GitHubCorner projectUrl="https://quiz-js.jvitormf.vercel.app/" />
+      <GitHubCorner projectUrl="https://github.com/jvitormf/imersao-alura-v2" />
     </QuizBackground>
   );
 }
+
+Home.propTypes = {
+  externalLinks: PropTypes.arrayOf(PropTypes.string).isRequired,
+  background: PropTypes.string.isRequired,
+};
