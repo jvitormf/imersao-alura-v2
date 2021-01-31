@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { ThemeProvider } from 'styled-components';
 
 import QuizScreen from '../../src/screens/Quiz';
@@ -6,7 +7,7 @@ import QuizScreen from '../../src/screens/Quiz';
 export default function QuizdaGaleraPage({ externalDb }) {
   return (
     <ThemeProvider theme={externalDb.theme}>
-      <QuizScreen externalQuestions={externalDb.questions} externalBg={externalDb.bg} />
+      <QuizScreen questions={externalDb.questions} background={externalDb.bg} />
     </ThemeProvider>
   );
 }
@@ -31,3 +32,8 @@ export async function getServerSideProps(context) {
     },
   };
 }
+
+QuizdaGaleraPage.propTypes = {
+  // eslint-disable-next-line react/forbid-prop-types
+  externalDb: PropTypes.object.isRequired,
+};
