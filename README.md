@@ -62,6 +62,10 @@ The website created is a quiz about Javascript.
 # :fireworks: Layout
 * Click [here](https://www.figma.com/file/cg1MIzSRRss8ggpypQbmdD/AluraQuiz?node-id=0%3A1) to see the web layout of this app.
 
+<img src=".github/screen.png" alt="Proffy">
+<img src=".github/ss1.png" alt="Proffy">
+<img src=".github/ss2.png" alt="Proffy">
+
 [:arrow_up: Back to top](#table-of-Contents)
 
 <!-- GETTING STARTED -->
